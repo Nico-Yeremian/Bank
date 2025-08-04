@@ -3,6 +3,11 @@ class Bank:
         self.username = name
         self.balance = 100
 
+    class BankAccount:
+        def __init__(self):
+
+
+
     def deposit(self, amount):
         self.balance += amount
 
@@ -10,5 +15,7 @@ class Bank:
         self.balance -= amount
 
 ChaseBank = Bank("Chase Bank")
+
+input()
 ChaseBank.deposit(int(input("How much would you like to deposit? ")))
 ChaseBank.withdraw(int(input("How much would you like to withdraw? ")))
