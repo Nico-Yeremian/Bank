@@ -2,10 +2,16 @@ class Bank:
     def __init__(self, name):
         self.username = name
         self.balance = 100
+        self.allAccounts = []
 
-    class BankAccount:
-        def __init__(self):
+    def addAccount(self, username, password):
+        self.username = username
+        self.password = password
 
+    class Account:
+        def __init__(self, username, password):
+            self.username = username
+            self.password = password
 
 
     def deposit(self, amount):
