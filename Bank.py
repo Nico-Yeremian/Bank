@@ -9,10 +9,10 @@ class Bank:
             self.username = username
             self.password = password
             self.balance = balance
-            self.number = number.randint(1, 999999)
+            self.account_number = number
 
     def add_account(self, username, password, balance):
-        new_account = self.Account(username, password, balance)
+        new_account = self.Account(username, password, balance, len(self.allAccounts)+1)
         self.allAccounts.append(new_account)
 
     def deposit(self, amount):
@@ -22,6 +22,7 @@ class Bank:
         self.balance -= amount
 
     def login(self, username, password):
+        input("Username: ")
 
 
 ChaseBank = Bank("Chase Bank")
